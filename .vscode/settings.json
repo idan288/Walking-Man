@@ -1,0 +1,9 @@
+{
+    "git.ignoreLimitWarning": true,
+    // Is git enabled
+    "git.enabled": false,
+    // Path to the git executable
+    "git.path": null,
+    // Whether auto fetching is enabled.
+    "git.autofetch": false,
+}

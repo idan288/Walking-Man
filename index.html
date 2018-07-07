@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="game-holder" id="gameHolder">
+        <div class="header">
+            <h1>
+                <span>the</span>CodeDraw</h1>
+            <h2>fly it to the end</h2>
+            <div class="score" id="score">
+                <div class="score__content" id="level">
+                    <div class="score__label">level</div>
+                    <div class="score__value score__value--level" id="levelValue">1</div>
+                    <svg class="level-circle" id="levelCircle" viewbox="0 0 200 200">
+                        <circle id="levelCircleBgr" r="80" cx="100" cy="100" fill="none" stroke="#d1b790" stroke-width="24px"></circle>
+                        <circle id="levelCircleStroke" r="80" cx="100" cy="100" fill="none" #f25346 stroke="#68c3c0" stroke-width="14px" stroke-dasharray="502"></circle>
+                    </svg>
+                </div>
+                <div class="score__content" id="dist">
+                    <div class="score__label">distance</div>
+                    <div class="score__value score__value--dist" id="distValue">000</div>
+                </div>
+                <div class="score__content" id="energy">
+                    <div class="score__label">energy</div>
+                    <div class="score__value score__value--energy" id="energyValue">
+                        <div class="energy-bar" id="energyBar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="world"></div>
+    </div>
+    <div id="editor"></div>
+    <div id="demo">
+        <div class="btn-group btn-group-lg" role="group">
+            <button class="btn btn-dark" onclick="Walk();">Walk</button>
+            <button class="btn btn-dark" onclick="Stop();">Stop</button>
+            <button class="btn btn-dark" onclick="Jump();">Jump</button>
+            <button class="btn btn-dark" onclick="Bend();">Bend</button>
+            <button class="btn btn-dark" onclick="Idle();">Idle</button>            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="lib/src/uncompressed/TimelineMax.js"></script>
+    <script src="lib/src/uncompressed/TimelineLite.js"></script>
+    <script src="lib/src/uncompressed/TweenLite.js"></script>
+    <script src="lib/src/uncompressed/TweenMax.js"></script>
+    <script src="lib/three.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
